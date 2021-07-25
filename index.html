@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+	</head>
+	<body>
+		<h1>Cloud Cafe</h1>
+
+		<div class="content">
+			<form id="add-cafe-form">
+				<input type="text" name="name" placeholder="Cafe name" />
+				<input type="text" name="city" placeholder="Cafe city" />
+				<button>Submit</button>
+			</form>
+
+			<ul id="cafe-list"></ul>
+			<form id="edit-cafe-form">
+				<input type="text" name="name" placeholder="Cafe name" />
+				<input type="text" name="city" placeholder="Cafe city" />
+				<button id="edit-submit-button">DONE EDIT</button>
+			</form>
+		</div>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyAaixjAgYG3X5VHTpiGgX0g0vAas036Ny8",
+				authDomain: "firestore-tut-7b27a.firebaseapp.com",
+				projectId: "firestore-tut-7b27a",
+				storageBucket: "firestore-tut-7b27a.appspot.com",
+				messagingSenderId: "987644498616",
+				appId: "1:987644498616:web:8e9a02b5e9b30e265c5a4d",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			var db = firebase.firestore();
+			db.settings({ timestampsInSnapshots: true });
+		</script>
+		<script src="app.js"></script>
+	</body>
+</html>
